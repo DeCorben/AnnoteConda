@@ -1,0 +1,45 @@
+{
+  "name": "annote",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "async": "^3.1.0",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "neo4j-driver": "^1.7.6",
+    "nodemon": "^1.19.4",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "scripts": {
+    "start": "nodemon src/server/index.js",
+    "test-watch": "node_modules/.bin/jest --watch",
+    "test-all": "node_modules/.bin/jest --watchAll",
+    "webpack": "node_modules/.bin/webpack -w"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
