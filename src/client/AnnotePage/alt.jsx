@@ -6,18 +6,14 @@ export default class AnnotePage extends React.Component{
         return (
             <div>
                 <div>
-                    <label>Source: </label>
-                    <input type="text" name="source" id="source"
+                    <label for="source">Source: </label>
+                    <input type="text" id="source"
                         />
-                </div>
-                <div>
-                    <label>Relationship: </label>
-                    <input type="text" name="rel"
+                    <label for="rel">Relationship: </label>
+                    <input type="text" id="rel"
                         />
-                </div>
-                <div>
-                    <label>Target: </label>
-                    <input type="text" name="target"
+                    <label for="target">Target: </label>
+                    <input type="text" id="target"
                         />
                 </div>
                 <div>
