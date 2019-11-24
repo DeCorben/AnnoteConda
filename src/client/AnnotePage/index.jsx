@@ -18,15 +18,12 @@ export default class AnnotePage extends React.Component{
 
     callApi(func){
         let {source,rel,target} = this.state
-        console.log(`State: ${JSON.stringify(this.state,null,'\t')}`)
-        console.log(`Src: ${source}\nRel: ${rel}\nTar: ${target}`)
         let endpoint = `/neo/${func}`
         if(source && rel && target){
             endpoint += '/rel'
         }else if(source){
             endpoint += '/nac'
         }
-        console.log(`Endpoint: ${endpoint}`)
         axios.post(endpoint,{source:source,rel:rel,target:target})
             .then((res)=>{
                 this.setState({result:res.data})

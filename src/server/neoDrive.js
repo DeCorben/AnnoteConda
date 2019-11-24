@@ -53,7 +53,7 @@ module.exports = {
             })
     },
     deleteNac: (input,cb)=>{
-        let cypher = 'MATCH (z:Nac {name:$source}) DELETE z'
+        let cypher = 'MATCH (z:Nac {name:$source}) WHERE NOT (z)-[]-() DELETE z'
         let sesh = driver.session()
         sesh.run(cypher,input)
             .subscribe({
